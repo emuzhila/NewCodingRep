@@ -1,0 +1,36 @@
+h1{
+    color: blue;
+    font-size: 90px;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 50vw;
+    height: 10vh;
+}
+label{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.big{
+    font-size: 5em;
+}
+.small{
+    font-size: 0.5em;
+}
+button{
+    width: 50vw;
+    height: 15vh;
+    background: blue;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: blanchedalmond;
+}
+button:hover{
+    background: #fff;
+    color: #000;
+}
