@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
+<title>Hotel management</title>
+
 </head>
 <body>
-   <h1>login</h1> 
-   <form action="">
-    <label class="big " for="email">input email</label>
-    <input type="email" name="email" id="email">
-    <label class="small" for="password">password</label>
-    <input type="password" name="" id="password">
-    <button>click</button>
-   </form>
+
+<aside class="hide">
+<div class="nav">
+
+
+<a href="#">Option 1</a>
+<a href="#">Option 2</a>
+<a href="#">Option 3</a>
+</div>
+</aside>
+
+<div class="content">
+<div class="menu-icon">
+&#9776; Menu
+</div>
+<!-- Your page content goes here -->
+<section class="">
+
+<div class="">
+<h1 class="">HOTEL management</h1>
+</div>
+
+</section>
+<section class="choices">
+<div class="choices">
+
+</div>
+<div class="choices">
+
+<label for="room-type"> Choose your suite</label>
+<div id="room-type" class="carbon-selector">
+<div class="selected-item" onclick="toggleOptions()">
+room type
+</div>
+<div class="options-list">
+<div class="option" onclick="selectItem('Item 1')">
+budget
+</div>
+<div class="option" onclick="selectItem('Item 2')">
+mid
+</div>
+<div class="option" onclick="selectItem('Item 3')">
+deluxe
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script>
+// Toggle the navigation menu on small screens
+document.querySelector('.menu-icon').addEventListener('click', function() {
+document.querySelector('nav').style.display = document.querySelector('nav').style.display === 'none' ? 'block': 'none';
+});
+</script>
 </body>
 </html>
