@@ -1,0 +1,87 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  aside {
+    background-color: #333;
+    color: #fff;
+    width: 20vw;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #555;
+  }
+
+  @media (max-width: 768px) {
+    aside {
+      transition: all 0.3s;
+      z-index: 999;
+      width: 40vw;
+    }
+  .hide{
+    display: none;
+  }
+    
+
+    .menu-icon {
+      cursor: pointer;
+      display: block;
+    }
+  }
+
+.carbon-selector {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.selected-item {
+    padding: 10px;
+    background-color: #0062ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    display: none;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #e5e5e5;
+}
