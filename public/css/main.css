@@ -4,12 +4,14 @@
     margin: 0;
     padding: 0;
     display: flex;
+    background: #121212;
+    color: #fffff1;
   }
 
   aside {
     background-color: #333;
     color: #fff;
-    width: 20vw;
+    width: 30vw;
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
@@ -17,25 +19,41 @@
     flex-direction: column;
   }
 
-
+.header{
+  display: flex;
+  background: white;
+  color: black;
+  width:100vw ;
+  height: absolute;
+}
 
   .nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 0;
-    display: block;
     transition: background-color 0.3s;
   }
 
   nav a:hover {
     background-color: #555;
   }
-
+.next-btn{
+  padding-left:1em ;
+  padding-right: 1em;
+  padding-bottom:0.75em ;
+  padding-top: 0.75em;
+  border: 1px solid rgba(255,255,255,0.6);
+  height: 5vh;
+  width: 50vw;
+  font-size: 1.7rem;
+  background: none;
+  border-radius: 3pt;
+  color: white;
+}
   @media (max-width: 768px) {
     aside {
       transition: all 0.3s;
       z-index: 999;
-      width: 40vw;
+      width: 50vw;
     }
   .hide{
     display: none;
@@ -46,12 +64,19 @@
       cursor: pointer;
       display: block;
     }
+    .next-btn{
+      width: 60vw;
+      font-size: 1.3rem;
+      height: 10vh;
+    }
   }
 
 .carbon-selector {
     position: relative;
     display: inline-block;
     font-size: 16px;
+    width: 40vw;
+    
 }
 
 .selected-item {
@@ -73,6 +98,7 @@
     overflow: hidden;
     display: none;
     background-color: #fff;
+    color: #000 ;
     z-index: 1;
 }
 
@@ -85,3 +111,24 @@
 .option:hover {
     background-color: #e5e5e5;
 }
+.choices{
+  
+  align-items: center;
+  width: 98vw;
+  height: auto;
+  padding-bottom:  4em;
+  margin-bottom: 2em;
+}
+.lead{
+  font-size: 1.3rem;
+}
+
+.next-btn:hover{
+  background-color: white ;
+  color: black;
+  
+}
+.active{
+   color: #0062ff;
+}
+
