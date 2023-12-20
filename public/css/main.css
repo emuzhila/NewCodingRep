@@ -18,7 +18,11 @@
     display: flex;
     flex-direction: column;
   }
-
+.brand-name{
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-style: italic;
+}
 .header{
   display: flex
   background: white;
