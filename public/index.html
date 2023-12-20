@@ -13,19 +13,19 @@
 <div class="nav">
 
 
-<a href="#">Option 1</a>
-<a href="#">Option 2</a>
-<a href="#">Option 3</a>
+<a href="#" class="active">customer</a>
+<a href="#">manager</a>
+<a href="#">signup</a>
 </div>
 </aside>
 
 <div class="content">
+
+<!-- Your page content goes here -->
+<section class="header">
 <div class="menu-icon">
 &#9776; Menu
 </div>
-<!-- Your page content goes here -->
-<section class="">
-
 <div class="">
 <h1 class="">HOTEL management</h1>
 </div>
@@ -37,32 +37,39 @@
 </div>
 <div class="choices">
 
-<label for="room-type"> Choose your suite</label>
+<p class="lead">
+Choose your suite
+</p>
 <div id="room-type" class="carbon-selector">
 <div class="selected-item" onclick="toggleOptions()">
 room type
 </div>
 <div class="options-list">
-<div class="option" onclick="selectItem('Item 1')">
+<div class="option" onclick="selectItem('budget')">
 budget
 </div>
-<div class="option" onclick="selectItem('Item 2')">
+<div class="option" onclick="selectItem('mid')">
 mid
 </div>
-<div class="option" onclick="selectItem('Item 3')">
+<div class="option" onclick="selectItem('deluxe')">
 deluxe
 </div>
 </div>
 </div>
 </div>
+
+<div class="choices">
+<p class="lead">
+select the date of depature
+</p>
+<input type="datetime-local" name="" id="" value="" placeholder="choose day and time" />
 </div>
+<button class="next-btn">Next</button>
 </section>
+
+</div>
+
+
 <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-<script>
-// Toggle the navigation menu on small screens
-document.querySelector('.menu-icon').addEventListener('click', function() {
-document.querySelector('nav').style.display = document.querySelector('nav').style.display === 'none' ? 'block': 'none';
-});
-</script>
 </body>
 </html>
