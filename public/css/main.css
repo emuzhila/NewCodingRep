@@ -27,10 +27,11 @@
   height: absolute;
 }
 
-  .nav a {
+  .nav-item {
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s;
+    padding: 0.5em;
   }
 
   nav a:hover {
