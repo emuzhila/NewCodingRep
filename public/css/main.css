@@ -9,6 +9,7 @@
   }
 
   aside {
+    position: relative;
     background-color: #333;
     color: #fff;
     width: 30vw;
@@ -23,12 +24,19 @@
   font-weight: lighter;
   font-style: italic;
 }
+.main{
+  padding-left: 1em;
+}
 .header{
-  display: flex
-  background: white;
+  
+  background: #333;
   color: black;
   width:100vw ;
-  height: absolute;
+  height: auto;
+}
+.heading{
+  font-size: 2rem;
+  color: #fff;
 }
 .nav{
   display: flex;
@@ -127,7 +135,7 @@
   align-items: center;
   width: 98vw;
   height: auto;
-  padding-bottom:  4em;
+  
   margin-bottom: 2em;
 }
 .lead{
@@ -150,4 +158,13 @@
    padding-bottom: 0.25;
    border-radius: 2pt;
 }
-
+.sub{
+  padding: 2em;
+}
+input{
+  border: none;
+  height: 5vh;
+  border-radius: 3pt;
+  background-color: #2D2D2DFF;
+  color: #fff ;
+}
