@@ -1,22 +1,31 @@
-let btn = document.querySelector('button')
-let error = document.querySelector('.error')
+function login() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
 
-let password = 'test';
-let user='test'
+  var data = {
+    username: username,
+    password: password
+  };
 
-
-function check() {
-	let pass = document.querySelector('#password');
-  let name = document.querySelector('#username');
-    
-    console.log('Function called');
-    
-    if (pass.value == password&& name.value == user) {
-    	window.location.href='index.html'
-        console.log('correct password');
+  fetch('/auth', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.message) {
+      // Login successful, handle accordingly
+      alert(data.message);
+      window.location.href="/dashboard"
     } else {
-        error.innerHTML='incorrect password and username';
+      // Login failed, handle accordingly
+      alert('Login failed: ' + data.err);
     }
-    
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 }
-btn.addEventListener('click', check)

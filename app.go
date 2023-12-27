@@ -20,9 +20,15 @@ func main() {
 	app.Static("/", "./public")
 
 	app.Get("/", func(c *fiber.Ctx) error {
+		return c.Render("login", fiber.Map{})
+	})
+	app.Get("/index", func(c *fiber.Ctx) error {
 		return c.Render("index", fiber.Map{})
 	})
-	app.Post("/login", func(c *fiber.Ctx) error {
+	app.Get("/dashboard", func(c *fiber.Ctx) error {
+		return c.Render("dashboard", fiber.Map{})
+	})
+	app.Post("/auth", func(c *fiber.Ctx) error {
 		var req map[string]string
 		if err := c.BodyParser(&req); err != nil {
 			log.Println("parsing err")
