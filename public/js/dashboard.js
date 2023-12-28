@@ -1,9 +1,4 @@
-/* globals Chart:false, feather:false */
 
-(function () {
-  'use strict'
-
-  feather.replace({ 'aria-hidden': 'true' })
 
   // Graphs
   var ctx = document.getElementById('myChart')
@@ -50,4 +45,34 @@
       }
     }
   })
-})
+
+  let box = document.querySelector(".box");
+ async ()=>{
+  try {
+    let response = await fetch("/getdata");
+    
+    if (!response.ok) {
+      console.error(`Server returned an error: ${response.status}`);
+      // Optionally, you can log the response text for more details
+      console.error(await response.text());
+      return;
+    }
+
+    let data = await response.json();
+    // Update your box or handle the data as needed
+    console.log("${data}")
+    box.innerHTML = ` <tr>
+                  <td>${data.RoomNumber
+                  }</td>
+                  <td>${data.RoomType}</td>
+                  <td>${data.Price}</td>
+                  
+                </tr>
+                <tr>
+                  `;
+  } catch (error) {
+    console.error("An unexpected error occurred:", error);
+  }
+};
+
+
