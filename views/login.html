@@ -7,19 +7,22 @@
   <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 </head>
 <body>
-  <h1 class="">login</h1>
-  <p class="error"></p>
-  <form id="loginForm">
+<h1 class="">login</h1>
+<p class="error"></p>
+<form id="loginForm">
 
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-      
-    <button type="button" onclick="login()">Login</button>    
-  </form>
+<label for="password">Password:</label>
 
-  <script type="text/javascript" src="js/login.js"></script>
+<input type="password" id="password" name="password" required>
+
+<button type="button" onclick="login()">Login</button>
+
+</form>
+
+<script src="js/htmx.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

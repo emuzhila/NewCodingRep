@@ -42,7 +42,7 @@
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="/login">Sign out</a>
+        <a class="nav-link px-3" href="/">Sign out</a>
       </div>
     </div>
   </header>
@@ -66,12 +66,12 @@
             </li>
 
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              
+
               <a class="link-secondary" href="#" aria-label="Add a new report">
                 <span data-feather="plus-circle"></span>
               </a>
             </h6>
-            
+
           </div>
         </nav>
 
@@ -80,21 +80,21 @@
             <h2 class="h1 ">manage rooms</h2>
           </div>
 
-          <form class="form-control ">
+          <form class="form-control " action="/upload" method="post">
             <div class="room-number-container col-sm-6">
-              <label class="label text-dark" for="rsoom-number"> room number</label>
-              <input type="number" class="input form-control" name="room-number" id="room-number" value="" />
+              <label class="label text-dark" for="RoomNumber"> room number</label>
+              <input type="number" class="input form-control" name="RoomNumber" id="RoomNumber" value="" />
           </div>
           <div class="room-type-container col-sm-6">
-            <label class="label text-dark" for="room-type"> room type</label>
-            <input type="text" class="form-control">
+            <label class="label text-dark" for="RoomType"> room type</label>
+            <input type="text" class="form-control" name="RoomType" id="RoomType">
           </div>
-          <div class="room-type-container col-12">
-            <label class="label text-dark" for="price"> price</label>
-            <input type="number" class="form-control" placeholder="in zambian kwacha" id="price">
+          <div class="Price-container col-12">
+            <label class="label text-dark" for="Price"> price</label>
+            <input type="number" class="form-control" placeholder="in zambian kwacha" id="Price" name="Price">
           </div>
-            <div class="divider"></div>
-          <button class="btn btn-dark btn-outline-light btn-large">save</button>
+          <div class="divider"></div>
+          <button type="submit" class="btn btn-dark btn-outline-light btn-large">save</button>
         </form>
       </main>
     </div>

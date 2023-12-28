@@ -1,0 +1,31 @@
+<button hx-get="/getdata"
+  hx-trigger="click"
+  hx-target=".box"
+  hx-swap="innerHTML">test</button>
+<p class="box"></p>
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+<script defer src="js/htmx.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  let box = document.querySelector(".box");
+
+document.querySelector("button").addEventListener("click", async () => {
+  try {
+    let response = await fetch("/getdata");
+    
+    if (!response.ok) {
+      console.error(`Server returned an error: ${response.status}`);
+      // Optionally, you can log the response text for more details
+      console.error(await response.text());
+      return;
+    }
+
+    let data = await response.json();
+    // Update your box or handle the data as needed
+    box.innerHTML = JSON.stringify(data);
+  } catch (error) {
+    console.error("An unexpected error occurred:", error);
+  }
+});
+
+</script>
